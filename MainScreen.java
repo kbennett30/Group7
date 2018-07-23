@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -48,10 +49,13 @@ public class MainScreen extends JPanel{
 		majorMoviesPanel = new JPanel();
 		majorMoviesPanel.setPreferredSize(new Dimension(900, 350));
 		majorMoviesPanel.setBackground(Color.black); 
-		Movie1 = new JButton();
-		Movie1.setBackground(Color.white);
-		Movie2 = new JButton();
-		Movie2.setBackground(Color.white);
+		Movie1 = new JButton(new ImageIcon("aiw.jpg"));
+		Movie1.setBorder(new EmptyBorder(2,2,2,2));
+		Movie1.setName("Avengers: Infinity War");
+		//System.out.println(System.getProperty("user.dir")); //finding where to store movie photos
+		Movie2 = new JButton(new ImageIcon("jw.jpg"));
+		Movie2.setBorder(new EmptyBorder(2,2,2,2));
+		Movie2.setName("Jurrassic World: Fallen Kingdom");
 		majorMoviesPanel.add(Movie1);
 		majorMoviesPanel.add(Movie2);
 		Movie1.setPreferredSize(new Dimension(300,350));
@@ -60,28 +64,23 @@ public class MainScreen extends JPanel{
 		Movie1.addActionListener(m1listener);
 		MovieListener m2listener = new MovieListener();
 		Movie2.addActionListener(m2listener);
-		
-					//ADDED LABELS TO BUTTONS
-					Movie1Label = new JLabel();
-					Movie1.add(Movie1Label);
-					Movie1Label.setText("Avengers: Infinity War");
-					Movie1.setName("Avengers: Infinity War");
-					Movie1Label.setFont(new Font("Century Gothic", Font.BOLD, 20));
 					
-					Movie2Label = new JLabel();
-					Movie2.add(Movie2Label);
-					Movie2Label.setText("Jurrassic World: Fallen Kingdom");
-					Movie2.setName("Jurrassic World: Fallen Kingdom");
-					Movie2Label.setFont(new Font("Century Gothic", Font.BOLD, 20));
+
 		
 		
 		//Other Movies Panel
 		otherMoviesPanel = new JPanel();
 		otherMoviesPanel.setPreferredSize(new Dimension(900, 300));
 		otherMoviesPanel.setBackground(Color.black);
-		Movie3 = new JButton();
-		Movie4 = new JButton();
-		Movie5 = new JButton();
+		Movie3 = new JButton(new ImageIcon("ant.jpg"));
+		Movie3.setBorder(new EmptyBorder(2,2,2,2));
+		Movie3.setName("Ant-Man and the Wasp");
+		Movie4 = new JButton(new ImageIcon("inc.png"));
+		Movie4.setBorder(new EmptyBorder(2,2,2,2));
+		Movie4.setName("Incredibles 2");
+		Movie5 = new JButton(new ImageIcon("big.jpg"));
+		Movie5.setBorder(new EmptyBorder(2,2,2,2));
+		Movie5.setName("BIG: 30th Anniversary(1988)");
 		Movie3.setBackground(Color.white);
 		Movie4.setBackground(Color.white);
 		Movie5.setBackground(Color.white);
@@ -97,26 +96,6 @@ public class MainScreen extends JPanel{
 		Movie4.addActionListener(m4listener);
 		MovieListener m5listener = new MovieListener();
 		Movie5.addActionListener(m5listener);
-
-		
-						//ADDED LABELS TO BUTTONS
-						Movie3Label = new JLabel();
-						Movie3.add(Movie3Label);
-						Movie3Label.setText("Ant-Man and the Wasp");
-						Movie3.setName("Ant-Man and the Wasp");
-						Movie3Label.setFont(new Font("Century Gothic", Font.BOLD, 15));
-						
-						Movie4Label = new JLabel();
-						Movie4.add(Movie4Label);
-						Movie4Label.setText("Incredibles 2");
-						Movie4.setName("Incredibles 2");
-						Movie4Label.setFont(new Font("Century Gothic", Font.BOLD, 15));
-						
-						Movie5Label = new JLabel();
-						Movie5.add(Movie5Label);
-						Movie5Label.setText("BIG: 30th Anniversary(1988)");
-						Movie5.setName("BIG: 30th Anniversary(1988)");
-						Movie5Label.setFont(new Font("Century Gothic", Font.BOLD, 15));
 		
 		//Background
 		JPanel controls = new JPanel();
